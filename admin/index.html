@@ -1,0 +1,95 @@
+<?php include 'header.php' ?>
+
+<div class="container p-6">
+
+    <div class="box-header font-bold text-3xl">
+        Dashboard
+    </div>
+
+    <div class="box-body font-bold text-2xl mb-3">
+        <h3>Selamat Datang <span class="text-blue-600"><?= $_SESSION['uname'] ?></span> di Panel Admin <span class="text-green-500"><?= $d->nama ?></span></h3>
+    </div>
+    <a href="informasi.php">
+        <div class="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-4">
+            <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+                <div class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
+                    <i data-lucide="badge-info"></i>
+                </div>
+                <div class="p-4 text-right">
+                    <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">Klik Untuk CRUD</p>
+                    <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">Informasi</h4>
+                </div>
+                <div class="border-t border-blue-gray-50 p-4">
+                    <p class="block antialiased font-sans text-green-500 leading-relaxed font-normal text-blue-gray-600">Lihat Detail</p>
+                </div>
+            </div>
+    </a>
+
+    <a href="galeri.php">
+        <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+            <div class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
+                <i data-lucide="images"></i>
+            </div>
+            <div class="p-4 text-right">
+                <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">Klik Untuk CRUD</p>
+                <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">Galeri</h4>
+            </div>
+            <div class="border-t border-blue-gray-50 p-4">
+                <p class="block antialiased font-sans text-green-500 leading-relaxed font-normal text-blue-gray-600">Lihat Detail</p>
+            </div>
+        </div>
+    </a>
+    <a href="jurusan.php">
+
+        <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+            <div class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
+                <i data-lucide="graduation-cap"></i>
+            </div>
+            <div class="p-4 text-right">
+                <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">Klik Untuk CRUD</p>
+                <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">Jurusan</h4>
+            </div>
+            <div class="border-t border-blue-gray-50 p-4">
+                <p class="block antialiased font-sans text-green-500 leading-relaxed font-normal text-blue-gray-600">Lihat Detail</p>
+            </div>
+        </div>
+    </a>
+    <a href="identitas-sekolah.php">
+
+        <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+            <div class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
+                <i data-lucide="school"></i>
+            </div>
+            <div class="p-4 text-right">
+                <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">Klik Untuk CRUD</p>
+                <h4 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">identitas</h4>
+            </div>
+            <div class="border-t border-blue-gray-50 p-4">
+                <p class="block antialiased font-sans text-green-500 leading-relaxed font-normal text-blue-gray-600">Lihat Detail</p>
+            </div>
+        </div>
+</div>
+</a>
+<div class="grid grid-cols-1 gap-6 mt-6 lg:grid-cols-2">
+    <!-- Chart -->
+    <div class="p-6 bg-white rounded-lg shadow">
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-semibold text-gray-700">Statistik Kehadiran</h2>
+            <div class="flex space-x-2">
+                <button class="px-3 py-1 text-xs bg-blue-100 rounded-full text-blue-600">Mingguan</button>
+                <button class="px-3 py-1 text-xs text-gray-500 rounded-full hover:bg-gray-100">Bulanan</button>
+            </div>
+        </div>
+        <div class="h-64">
+            <canvas id="attendanceChart"></canvas>
+        </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6 max-w-sm w-full text-center">
+        <h2 class="text-xl font-bold text-gray-800">Growth</h2>
+        <p class="text-sm text-gray-500 mb-4">Growth Doughnut Chart</p>
+        <canvas id="myChart" class="mx-auto w-full max-w-xs"></canvas>
+    </div>
+</div>
+</div>
+</div>
+<?php include 'footer.php' ?>
