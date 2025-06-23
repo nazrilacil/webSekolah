@@ -132,6 +132,13 @@
     <li>Login</li>
     <li>Dashboard</li>
     <li>Data Pengguna (CRUD)</li>
+    <li>Data Jurusan (CRUD)</li>
+    <li>Data Galeri (CRUD)</li>
+    <li>Data Slider (CRUD)</li>
+    <li>Data Informasi (CRUD)</li>
+    <li>Identitas Sekolah</li>
+    <li>Tentang Sekolah</li>
+    <li>Kepala Sekolah</li>
     <li>Ubah Password</li>
     <li>Keluar</li>
   </ul>
@@ -142,6 +149,7 @@
     <li>Dashboard</li>
     <li>Data Jurusan (CRUD)</li>
     <li>Data Galeri (CRUD)</li>
+    <li>Data Slider (CRUD)</li>
     <li>Data Informasi (CRUD)</li>
     <li>Identitas Sekolah</li>
     <li>Tentang Sekolah</li>
