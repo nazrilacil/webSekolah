@@ -1,6 +1,8 @@
 <body>
+  <a href="https://osissmkalmasturiyah.42web.io/?i=1">
+  <img src="https://opengraph.b-cdn.net/production/images/16aac734-a876-4e5d-88ea-dc128b43689b.png?token=fMBLQv3-4Ie0mty4Qn7bAXaqhedm4HrtuV1V50ECfxk&height=579&width=1200&expires=33286528007" />
   <h1>Template Website Sekolah (SMK)</h1>
-
+  </a>
   <h2>📦 Teknologi yang Digunakan</h2>
   <ul>
     <li><strong>Frontend:</strong> HTML, CSS, JavaScript, TailwindCSS</li>
