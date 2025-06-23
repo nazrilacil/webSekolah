@@ -1,98 +1,154 @@
-Studi Kasus => Website Sekolah (SMK)
+<body>
+  <h1>Template Website Sekolah (SMK)</h1>
 
-Frontend	: HTML dan CSS
-Backend		: PHP
-Text Editor	: Sublime Text / Notepad++ / Visual Studio Code / Dreamweaver atau yang lainnya
-Web Server	: XAMPP 7.3
+  <h2>📦 Teknologi yang Digunakan</h2>
+  <ul>
+    <li><strong>Frontend:</strong> HTML, CSS, JavaScript, TailwindCSS</li>
+    <li><strong>Backend:</strong> PHP</li>
+    <li><strong>DBMS:</strong> MySQL</li>
+  </ul>
 
-Pengguna	: 1 User
-		  2 Super Admin
-		  3 Admin
+  <h2>🛠 Tools</h2>
+  <ul>
+    <li><strong>Text Editor:</strong> VS Code, Sublime Text, Notepad++, Dreamweaver, dll</li>
+    <li><strong>Web Server:</strong>
+      <ul>
+        <li>Windows: Laragon, XAMPP, WAMP</li>
+        <li>Mac: XAMPP, MAMP</li>
+        <li>Linux: XAMPP, LAMP</li>
+      </ul>
+    </li>
+  </ul>
 
+  <h2>👤 Pengguna</h2>
+  <ul>
+    <li>1. User</li>
+    <li>2. Super Admin</li>
+    <li>3. Admin</li>
+  </ul>
 
-STRUKTUR DATABASE
--------------------------------------------
-# Database => db_sekolah
+  <h2>🗃 Struktur Database: <code>db_sekolah</code></h2>
 
-# pengguna
-===========================================
-1 id			| int (11) primary key auto increment
-2 nama			| varchar (30)
-3 username		| varchar (30)
-4 password		| varchar (50)
-5 level			| enum ('Super Admin', 'Admin)
-6 created_at		| timestamp
-7 updated_at		| datetime null
+  <h3>📁 Tabel: pengguna</h3>
+  <table>
+    <thead><tr><th>Kolom</th><th>Tipe</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>int(11) PRIMARY KEY AUTO_INCREMENT</td></tr>
+      <tr><td>nama</td><td>varchar(30)</td></tr>
+      <tr><td>username</td><td>varchar(30)</td></tr>
+      <tr><td>password</td><td>varchar(50)</td></tr>
+      <tr><td>level</td><td>enum('Super Admin','Admin')</td></tr>
+      <tr><td>created_at</td><td>timestamp</td></tr>
+      <tr><td>updated_at</td><td>datetime NULL</td></tr>
+    </tbody>
+  </table>
 
-# pengaturan
-===========================================
-1 id			| int (11) primary key auto increment
-2 nama			| varchar (50)
-3 email			| varchar (50)
-4 telepon		| varchar (20)
-5 alamat		| text
-6 logo			| varchar (50)
-7 favicon		| varchar (50)
-8 tentang		| text
-9 foto_sekolah		| varchar (50)
-10 google_maps		| text
-11 nama_kepsek		| varchar (50)
-12 foto_kepsek		| varchar 50
-13 sambutan_kepsek	| text
-14 created_at		| timestamp
-15 updated_at		| datetime null
+  <h3>📁 Tabel: pengaturan</h3>
+  <table>
+    <thead><tr><th>Kolom</th><th>Tipe</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>int(11) PRIMARY KEY AUTO_INCREMENT</td></tr>
+      <tr><td>nama</td><td>varchar(50)</td></tr>
+      <tr><td>email</td><td>varchar(50)</td></tr>
+      <tr><td>telepon</td><td>varchar(20)</td></tr>
+      <tr><td>alamat</td><td>text</td></tr>
+      <tr><td>logo</td><td>varchar(50)</td></tr>
+      <tr><td>favicon</td><td>varchar(50)</td></tr>
+      <tr><td>tentang</td><td>text</td></tr>
+      <tr><td>foto_sekolah</td><td>varchar(50)</td></tr>
+      <tr><td>google_maps</td><td>text</td></tr>
+      <tr><td>nama_kepsek</td><td>varchar(50)</td></tr>
+      <tr><td>foto_kepsek</td><td>varchar(50)</td></tr>
+      <tr><td>sambutan_kepsek</td><td>text</td></tr>
+      <tr><td>created_at</td><td>timestamp</td></tr>
+      <tr><td>updated_at</td><td>datetime NULL</td></tr>
+      <tr><td>visi</td><td>varchar(1000)</td></tr>
+      <tr><td>misi</td><td>varchar(1000)</td></tr>
+    </tbody>
+  </table>
 
-# jurusan
-===========================================
-1 id			| int (11) primary key auto increment
-2 nama			| varchar (100)
-3 keterangan		| text
-4 created_at		| timestamp
-5 updated_at		| datetime null
+  <h3>📁 Tabel: jurusan</h3>
+  <table>
+    <thead><tr><th>Kolom</th><th>Tipe</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>int(11) PRIMARY KEY AUTO_INCREMENT</td></tr>
+      <tr><td>nama</td><td>varchar(100)</td></tr>
+      <tr><td>keterangan</td><td>text</td></tr>
+      <tr><td>created_at</td><td>timestamp</td></tr>
+      <tr><td>updated_at</td><td>datetime NULL</td></tr>
+    </tbody>
+  </table>
 
-# informasi
-===========================================
-1 id			| int (11) primary key auto increment
-2 judul			| varchar (100)
-3 keterangan		| text
-4 created_at		| timestamp
-5 updated_at		| datetime null
-6 created_by		| int (11) foreign key
+  <h3>📁 Tabel: informasi</h3>
+  <table>
+    <thead><tr><th>Kolom</th><th>Tipe</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>int(11) PRIMARY KEY AUTO_INCREMENT</td></tr>
+      <tr><td>judul</td><td>varchar(100)</td></tr>
+      <tr><td>keterangan</td><td>text</td></tr>
+      <tr><td>created_at</td><td>timestamp</td></tr>
+      <tr><td>updated_at</td><td>datetime NULL</td></tr>
+      <tr><td>created_by</td><td>int(11) FOREIGN KEY</td></tr>
+    </tbody>
+  </table>
 
-# galeri
-===========================================
-1 id			| int (11) primary key auto increment
-2 foto			| varchar (50)
-3 keterangan		| varchar (50)
-4 created_at		| timestamp
-5 updated_at		| datetime null
+  <h3>📁 Tabel: galeri</h3>
+  <table>
+    <thead><tr><th>Kolom</th><th>Tipe</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>int(11) PRIMARY KEY AUTO_INCREMENT</td></tr>
+      <tr><td>foto</td><td>varchar(50)</td></tr>
+      <tr><td>keterangan</td><td>varchar(50)</td></tr>
+      <tr><td>created_at</td><td>timestamp</td></tr>
+      <tr><td>updated_at</td><td>datetime NULL</td></tr>
+    </tbody>
+  </table>
 
+  <h3>📁 Tabel: sliders</h3>
+  <table>
+    <thead><tr><th>Kolom</th><th>Tipe</th></tr></thead>
+    <tbody>
+      <tr><td>id</td><td>int(11) PRIMARY KEY AUTO_INCREMENT</td></tr>
+      <tr><td>title</td><td>varchar(255)</td></tr>
+      <tr><td>image</td><td>varchar(255)</td></tr>
+      <tr><td>created_at</td><td>timestamp</td></tr>
+    </tbody>
+  </table>
 
-MENU
---------------------------------------------
-1 User			: - Beranda
-			  - Tentang Sekolah
-			  - Jurusan
-			  - Galeri
-			  - Informasi
-			  - Kontak
+  <h2>📋 Menu Akses</h2>
 
-2 Super Admin		: - Login
-			  - Dashboard
-			  - Data Pengguna (create, read, update, delete)
-			  - Ubah Password
-			  - Keluar
+  <h3>User</h3>
+  <ul>
+    <li>Beranda</li>
+    <li>Tentang Sekolah</li>
+    <li>Jurusan</li>
+    <li>Galeri</li>
+    <li>Informasi</li>
+    <li>Kontak</li>
+  </ul>
 
-2 Admin			: - Login
-			  - Dashboard
-			  - Data Jurusan (create, read, update, delete)
-			  - Data Galeri (create, read, update, delete)
-			  - Data Informasi (create, read, update, delete)
-			  - Identitas Sekolah (update)
-			  - Tentang Sekolah (update)
-			  - Kepala Sekolah (update)
-			  - Ubah Password
-			  - Keluar
+  <h3>Super Admin</h3>
+  <ul>
+    <li>Login</li>
+    <li>Dashboard</li>
+    <li>Data Pengguna (CRUD)</li>
+    <li>Ubah Password</li>
+    <li>Keluar</li>
+  </ul>
 
+  <h3>Admin</h3>
+  <ul>
+    <li>Login</li>
+    <li>Dashboard</li>
+    <li>Data Jurusan (CRUD)</li>
+    <li>Data Galeri (CRUD)</li>
+    <li>Data Informasi (CRUD)</li>
+    <li>Identitas Sekolah</li>
+    <li>Tentang Sekolah</li>
+    <li>Kepala Sekolah</li>
+    <li>Ubah Password</li>
+    <li>Keluar</li>
+  </ul>
 
-<<================== Selamat Mengerjakan ===================>
+</body>
+</html>
